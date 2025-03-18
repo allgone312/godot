@@ -1,1 +1,5 @@
 # godot
+放一些godot相关项目
+
+1.unitypackage_godot、unitypackage_util、FBX2glTF
+用于将unity的package包解析到godot中。unitypackage_godot为godot执行文件，unitypackage_util、FBX2glTF两个为依赖工具，需放到unitypackage_godot同目录下。
