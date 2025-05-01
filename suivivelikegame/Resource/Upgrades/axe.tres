@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://cc8f0rot0x6h4"]
+
+[ext_resource type="PackedScene" uid="uid://b2bpsr5uf4tgw" path="res://Scenes/Abilities/AxeAbility/axe_ability_controller.tscn" id="1_1kn6o"]
+[ext_resource type="Texture2D" uid="uid://rvj0vnu4vkdu" path="res://Assets/Abilities/bg_icons/0399.png" id="1_jxr57"]
+[ext_resource type="Script" uid="uid://dmwwgqro2fqld" path="res://Scripts/Abilities/Upgrades/Ability_Itself.cs" id="3_ig2av"]
+
+[resource]
+script = ExtResource("3_ig2av")
+abilityController_scene = ExtResource("1_1kn6o")
+id = "axe"
+weight = 10
+parent_ability_id = ""
+max_count = 1
+name = "旋风斧"
+icon = ExtResource("1_jxr57")
+description = "每隔一定时间出现一把围绕自身的飞斧攻击周围敌人。"

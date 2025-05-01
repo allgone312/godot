@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dppre0joxmpip"]
+
+[ext_resource type="Script" uid="uid://el4l1p0d70j8" path="res://Scripts/Main/GameCamera.cs" id="1_crrp5"]
+
+[node name="GameCamera" type="Camera2D"]
+limit_smoothed = true
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+script = ExtResource("1_crrp5")

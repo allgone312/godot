@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://clcvuncarohyf"]
+
+[ext_resource type="Texture2D" uid="uid://bjmj0y7mt4j3i" path="res://Assets/Abilities/bg_icons/0001.png" id="1_0gmkl"]
+[ext_resource type="Script" uid="uid://bgxatxcwyq6kj" path="res://Scripts/Abilities/Upgrades/Ability_Upgrades.cs" id="2_dwx64"]
+
+[resource]
+script = ExtResource("2_dwx64")
+id = "sword_damage"
+weight = 10
+parent_ability_id = ""
+max_count = 0
+name = "攻击力"
+icon = ExtResource("1_0gmkl")
+description = "剑的攻击力提高15%"

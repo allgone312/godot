@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://nvksf0ghu3p4"]
+
+[ext_resource type="Script" uid="uid://bjnjt22uvdfpu" path="res://Scripts/Component/RangedAttackComponent.cs" id="1_c2833"]
+
+[node name="RangedAttackComponent" type="Node"]
+script = ExtResource("1_c2833")
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+one_shot = true

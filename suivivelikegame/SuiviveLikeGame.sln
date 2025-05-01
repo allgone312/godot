@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuiviveLikeGame", "SuiviveLikeGame.csproj", "{80341E3C-0737-4660-A464-C0F638DF32BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		ExportDebug|Any CPU = ExportDebug|Any CPU
+		ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80341E3C-0737-4660-A464-C0F638DF32BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80341E3C-0737-4660-A464-C0F638DF32BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80341E3C-0737-4660-A464-C0F638DF32BD}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{80341E3C-0737-4660-A464-C0F638DF32BD}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{80341E3C-0737-4660-A464-C0F638DF32BD}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{80341E3C-0737-4660-A464-C0F638DF32BD}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

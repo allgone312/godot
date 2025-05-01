@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://j7pa5hy8q7p4"]
+
+[ext_resource type="PackedScene" uid="uid://dsn6kte87bq5j" path="res://Scenes/GameObjects/Enemies/flying_enemy.tscn" id="1_fdwuy"]
+[ext_resource type="Script" uid="uid://bxo44dp80yrj2" path="res://Scripts/GameObjects/Enemies/EnemyProperty.cs" id="2_cyb87"]
+
+[resource]
+script = ExtResource("2_cyb87")
+enemyPackedScene = ExtResource("1_fdwuy")
+enemyName = "flying_enemy"
+enemyType = "flying"
+weight = 30
+difficultyToSpawn = 3

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://dds2i1tmkl3wy"]
+
+[ext_resource type="Texture2D" uid="uid://d3vtdx7p187rm" path="res://Assets/Abilities/bg_icons/0520.png" id="1_3t4o0"]
+[ext_resource type="Script" uid="uid://bgxatxcwyq6kj" path="res://Scripts/Abilities/Upgrades/Ability_Upgrades.cs" id="2_tb6nu"]
+
+[resource]
+script = ExtResource("2_tb6nu")
+id = "bow_piercingshot"
+weight = 3
+parent_ability_id = "bow"
+max_count = 1
+name = "穿透射击"
+icon = ExtResource("1_3t4o0")
+description = "箭矢可穿透敌人。"

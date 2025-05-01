@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://c77adx0egt2iy"]
+
+[ext_resource type="Texture2D" uid="uid://bjmj0y7mt4j3i" path="res://Assets/Abilities/bg_icons/0001.png" id="1_3x7fs"]
+[ext_resource type="Script" uid="uid://bgxatxcwyq6kj" path="res://Scripts/Abilities/Upgrades/Ability_Upgrades.cs" id="1_h7pyt"]
+
+[resource]
+script = ExtResource("1_h7pyt")
+id = "sword_rate"
+weight = 10
+parent_ability_id = ""
+max_count = 5
+name = "攻击速度"
+icon = ExtResource("1_3x7fs")
+description = "剑的攻击速度提高10%"

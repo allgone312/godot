@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccjtu7lnxvf2t"]
+
+[ext_resource type="AudioStream" uid="uid://bsj4nng3xilih" path="res://Assets/Audio/footstep_carpet_000.ogg" id="1_rj7tt"]
+[ext_resource type="Script" uid="uid://drndpottia26k" path="res://Scripts/Component/RandomAudioComponent.cs" id="2_2rc1g"]
+
+[node name="RandomAudioComponent" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_rj7tt")
+max_distance = 300.0
+bus = &"SFX"
+script = ExtResource("2_2rc1g")

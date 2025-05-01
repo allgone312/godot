@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://b52c64nvuh2aa"]
+
+[ext_resource type="Texture2D" uid="uid://d3vtdx7p187rm" path="res://Assets/Abilities/bg_icons/0520.png" id="1_40d7w"]
+[ext_resource type="Script" uid="uid://bgxatxcwyq6kj" path="res://Scripts/Abilities/Upgrades/Ability_Upgrades.cs" id="2_v2yjf"]
+
+[resource]
+script = ExtResource("2_v2yjf")
+id = "bow_mutishot"
+weight = 6
+parent_ability_id = "bow"
+max_count = 2
+name = "多重射击"
+icon = ExtResource("1_40d7w")
+description = "增加每次同时射出的箭矢数量。"

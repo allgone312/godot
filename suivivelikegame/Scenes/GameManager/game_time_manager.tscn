@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bj1ejw64ru3gn"]
+
+[ext_resource type="Script" uid="uid://bmxpc6xqqt3vn" path="res://Scripts/GameManager/GameTimeManager.cs" id="1_kg4ir"]
+[ext_resource type="PackedScene" uid="uid://t1b3fxu21vpu" path="res://Scenes/UI/game_end_screen.tscn" id="2_b04xm"]
+
+[node name="GameTimeManager" type="Node"]
+script = ExtResource("1_kg4ir")
+game_end_scene = ExtResource("2_b04xm")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 300.0
+one_shot = true
+autostart = true

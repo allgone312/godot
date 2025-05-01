@@ -1,0 +1,21 @@
+[gd_scene load_steps=8 format=3 uid="uid://dbgnbcih7oqgt"]
+
+[ext_resource type="Script" uid="uid://duujf1xjc7sqf" path="res://Scripts/UI/SoundButton.cs" id="1_f0ifp"]
+[ext_resource type="PackedScene" uid="uid://cbo1aqfa2s2jg" path="res://Scenes/Component/ui_audio_player_component.tscn" id="2_u4j5l"]
+[ext_resource type="AudioStream" uid="uid://d1ebgayhkibll" path="res://Assets/Audio/click1.ogg" id="3_4qnlh"]
+[ext_resource type="AudioStream" uid="uid://ber2tfn1a6jya" path="res://Assets/Audio/click2.ogg" id="4_6tyxu"]
+[ext_resource type="AudioStream" uid="uid://vlh8vnjeno33" path="res://Assets/Audio/click3.ogg" id="5_pwgj5"]
+[ext_resource type="AudioStream" uid="uid://cb6ucfi5wmrtb" path="res://Assets/Audio/click4.ogg" id="6_py0cb"]
+[ext_resource type="AudioStream" uid="uid://s4y1llp7i8gw" path="res://Assets/Audio/click5.ogg" id="7_dwy6d"]
+
+[node name="SoundButton" type="Button" node_paths=PackedStringArray("uiAudioComponent")]
+offset_left = 1.0
+offset_right = 161.0
+offset_bottom = 22.0
+text = "重新开始"
+script = ExtResource("1_f0ifp")
+uiAudioComponent = NodePath("UIAudioPlayerComponent")
+
+[node name="UIAudioPlayerComponent" parent="." instance=ExtResource("2_u4j5l")]
+audioStreams = Array[AudioStream]([ExtResource("3_4qnlh"), ExtResource("4_6tyxu"), ExtResource("5_pwgj5"), ExtResource("6_py0cb"), ExtResource("7_dwy6d")])
+random_picth = false

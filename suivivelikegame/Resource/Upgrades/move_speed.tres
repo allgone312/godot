@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://vdes3ibyrqte"]
+
+[ext_resource type="Texture2D" uid="uid://dc7k7pn6pkkpn" path="res://Assets/Abilities/bg_icons/0159.png" id="1_gvkh5"]
+[ext_resource type="Script" uid="uid://bgxatxcwyq6kj" path="res://Scripts/Abilities/Upgrades/Ability_Upgrades.cs" id="2_20hcx"]
+
+[resource]
+script = ExtResource("2_20hcx")
+id = "move_speed"
+weight = 5
+parent_ability_id = ""
+max_count = 5
+name = "移动速度"
+icon = ExtResource("1_gvkh5")
+description = "角色移动速度提高10%"

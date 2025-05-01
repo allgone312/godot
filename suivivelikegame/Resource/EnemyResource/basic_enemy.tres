@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://t0whtvib57f6"]
+
+[ext_resource type="PackedScene" uid="uid://dwt6o2akba0x0" path="res://Scenes/GameObjects/Enemies/basic_enemy.tscn" id="1_4stw7"]
+[ext_resource type="Script" uid="uid://bxo44dp80yrj2" path="res://Scripts/GameObjects/Enemies/EnemyProperty.cs" id="2_b5alg"]
+
+[resource]
+script = ExtResource("2_b5alg")
+enemyPackedScene = ExtResource("1_4stw7")
+enemyName = "basic_enemy"
+enemyType = "zako"
+weight = 100
+difficultyToSpawn = 0

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://78rtndli5jbw"]
+
+[ext_resource type="Script" uid="uid://cvgpftu5sgm34" path="res://Scripts/Abilities/Bow/BowAbilibyController.cs" id="1_jyjk5"]
+[ext_resource type="PackedScene" uid="uid://cc83ub0jyxgdq" path="res://Scenes/Abilities/BowAbility/bow_ability.tscn" id="2_07a2o"]
+
+[node name="BowAbilibyController" type="Node"]
+script = ExtResource("1_jyjk5")
+bowScene = ExtResource("2_07a2o")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true

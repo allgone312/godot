@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2bpsr5uf4tgw"]
+
+[ext_resource type="Script" uid="uid://bfmywa422xbpe" path="res://Scripts/Abilities/Axe/AxeAbilityController.cs" id="1_fkfog"]
+[ext_resource type="PackedScene" uid="uid://de26exxb3vtf8" path="res://Scenes/Abilities/AxeAbility/axe_ability.tscn" id="2_3e6d3"]
+
+[node name="AxeAbilityController" type="Node"]
+script = ExtResource("1_fkfog")
+axeDamage = 15.0
+axeAbilityScene = ExtResource("2_3e6d3")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.5
+autostart = true

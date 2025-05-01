@@ -1,0 +1,84 @@
+[gd_scene load_steps=8 format=3 uid="uid://dkoa4qen2v4cm"]
+
+[ext_resource type="Script" uid="uid://cx0je3afylnex" path="res://Scripts/UI/MetaMenu.cs" id="1_3sfio"]
+[ext_resource type="Resource" uid="uid://doilv0sas7opy" path="res://Resource/Meta_Upgrades/Experience_gain.tres" id="2_i7am2"]
+[ext_resource type="PackedScene" uid="uid://dbgnbcih7oqgt" path="res://Scenes/UI/sound_button.tscn" id="3_gmx7f"]
+[ext_resource type="Texture2D" uid="uid://c7ecl3l1dle4g" path="res://Assets/GameObjects/Icons/0503.png" id="3_kprio"]
+[ext_resource type="PackedScene" uid="uid://dr0jbvpu21k5g" path="res://Scenes/UI/vignette.tscn" id="3_n47us"]
+[ext_resource type="Texture2D" uid="uid://bjbvt1m4mhb1b" path="res://Assets/ui/ui.png" id="5_rt38t"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ixlio"]
+texture = ExtResource("5_rt38t")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+region_rect = Rect2(18, 2, 12, 12)
+
+[node name="MetaMenu" type="CanvasLayer"]
+layer = 2
+script = ExtResource("1_3sfio")
+upgrades = Array[Resource]([ExtResource("2_i7am2")])
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 636.0
+offset_bottom = 357.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="BackButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("3_gmx7f")]
+layout_mode = 2
+text = "返回标题"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 0
+theme_override_constants/separation = -2
+
+[node name="CurrencyLabel" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"BlueOutlineLabel"
+text = "100"
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_kprio")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_ixlio")
+follow_focus = true
+draw_focus_border = true
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_constants/h_separation = 16
+columns = 3
+
+[node name="Vignette" parent="." instance=ExtResource("3_n47us")]
+layer = 3

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://doilv0sas7opy"]
+
+[ext_resource type="Script" uid="uid://5bk68wwgo8kh" path="res://Scripts/Abilities/Meta_Upgrades/MetaUpgrade.cs" id="1_dwi0p"]
+
+[resource]
+script = ExtResource("1_dwi0p")
+id = "experience_gain"
+max_quantity = 5
+currency_cost = 100
+title = "经验掉落增加"
+description = "每一级经验掉落率增加10%"

@@ -1,0 +1,242 @@
+[gd_scene load_steps=38 format=3 uid="uid://ddf1fmjco1i4o"]
+
+[ext_resource type="Script" uid="uid://dmmo04d3bdxyo" path="res://Scripts/GameObjects/Player/Player.cs" id="1_a3d8c"]
+[ext_resource type="PackedScene" uid="uid://b74rd7tio0hkw" path="res://Scenes/Component/health_component.tscn" id="2_ja7jd"]
+[ext_resource type="PackedScene" uid="uid://c7vrh34houhwf" path="res://Scenes/Abilities/SwordAbility/sword_abiliby_controller.tscn" id="2_mtuoh"]
+[ext_resource type="PackedScene" uid="uid://dv0wxnl286s2m" path="res://Scenes/Component/velocity_component.tscn" id="3_f2fn7"]
+[ext_resource type="Texture2D" uid="uid://dj2626t3rr2y3" path="res://Assets/Characters/character_2/09.png" id="4_sly3r"]
+[ext_resource type="Texture2D" uid="uid://cqwa0s016qva7" path="res://Assets/Characters/character_2/00.png" id="5_f2fn7"]
+[ext_resource type="Texture2D" uid="uid://bvs8bvvuuv20x" path="res://Assets/Characters/character_2/01.png" id="6_c1e0u"]
+[ext_resource type="PackedScene" uid="uid://ccjtu7lnxvf2t" path="res://Scenes/Component/Random_audio_component.tscn" id="8_g2a3k"]
+[ext_resource type="AudioStream" uid="uid://di81jwckn40gx" path="res://Assets/Audio/impactMining_000.ogg" id="9_m2ljl"]
+[ext_resource type="AudioStream" uid="uid://gi6xgah8ffv7" path="res://Assets/Audio/impactMining_001.ogg" id="10_eef3r"]
+[ext_resource type="AudioStream" uid="uid://c62uy4r28cjy8" path="res://Assets/Audio/impactMining_002.ogg" id="11_tuq7x"]
+[ext_resource type="AudioStream" uid="uid://cu6buxyig22w1" path="res://Assets/Audio/impactMining_003.ogg" id="12_pnj62"]
+[ext_resource type="AudioStream" uid="uid://dagmts6tkiilr" path="res://Assets/Audio/impactMining_004.ogg" id="13_8d602"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lg6ua"]
+radius = 26.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ja7jd"]
+radius = 7.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mtuoh"]
+radius = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ja7jd"]
+bg_color = Color(0.247059, 0.14902, 0.192157, 1)
+border_color = Color(0.2, 0.2, 0.2, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r5vvq"]
+bg_color = Color(0.396078, 1, 0.490196, 1)
+border_color = Color(0.2, 0.2, 0.2, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xo8ii"]
+atlas = ExtResource("4_sly3r")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hpw64"]
+atlas = ExtResource("4_sly3r")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xbt1q"]
+atlas = ExtResource("4_sly3r")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nxvfu"]
+atlas = ExtResource("4_sly3r")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2a3k"]
+atlas = ExtResource("4_sly3r")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m2ljl"]
+atlas = ExtResource("4_sly3r")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eef3r"]
+atlas = ExtResource("5_f2fn7")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuq7x"]
+atlas = ExtResource("5_f2fn7")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pnj62"]
+atlas = ExtResource("5_f2fn7")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8d602"]
+atlas = ExtResource("5_f2fn7")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x1e4f"]
+atlas = ExtResource("5_f2fn7")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mqdnu"]
+atlas = ExtResource("5_f2fn7")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qr4ym"]
+atlas = ExtResource("6_c1e0u")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lyq5y"]
+atlas = ExtResource("6_c1e0u")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_doq8q"]
+atlas = ExtResource("6_c1e0u")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o7cl0"]
+atlas = ExtResource("6_c1e0u")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ur8m7"]
+atlas = ExtResource("6_c1e0u")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_27ibk"]
+atlas = ExtResource("6_c1e0u")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x40gg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xo8ii")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hpw64")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xbt1q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nxvfu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2a3k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m2ljl")
+}],
+"loop": true,
+"name": &"Died",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eef3r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuq7x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pnj62")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8d602")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x1e4f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mqdnu")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qr4ym")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lyq5y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_doq8q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o7cl0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ur8m7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_27ibk")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 10.0
+}]
+
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("healthComponent") groups=["Player"]]
+light_mask = 0
+z_index = 5
+collision_layer = 0
+motion_mode = 1
+script = ExtResource("1_a3d8c")
+healthComponent = NodePath("HealthComponent")
+
+[node name="HealthComponent" parent="." instance=ExtResource("2_ja7jd")]
+
+[node name="VelocityComponent" parent="." instance=ExtResource("3_f2fn7")]
+max_speed = 80.0
+acceleration = 200.0
+
+[node name="Abilities" type="Node" parent="."]
+
+[node name="SwordAbilibyController" parent="Abilities" instance=ExtResource("2_mtuoh")]
+
+[node name="InvencibleTimer" type="Timer" parent="."]
+wait_time = 0.7
+one_shot = true
+
+[node name="PickItemsArea2D" type="Area2D" parent="."]
+visible = false
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickItemsArea2D"]
+shape = SubResource("CircleShape2D_lg6ua")
+
+[node name="HurtArea2D" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 136
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtArea2D"]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_ja7jd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_mtuoh")
+
+[node name="RandomAudioComponent" parent="." instance=ExtResource("8_g2a3k")]
+audioStreams = Array[AudioStream]([ExtResource("9_m2ljl"), ExtResource("10_eef3r"), ExtResource("11_tuq7x"), ExtResource("12_pnj62"), ExtResource("13_8d602")])
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(20, 2)
+offset_left = -15.0
+offset_top = 9.0
+offset_right = 15.0
+offset_bottom = 11.0
+pivot_offset = Vector2(15, 3)
+theme_override_styles/background = SubResource("StyleBoxFlat_ja7jd")
+theme_override_styles/fill = SubResource("StyleBoxFlat_r5vvq")
+max_value = 1.0
+value = 0.5
+show_percentage = false
+
+[node name="PlayerAnimation" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -8)
+sprite_frames = SubResource("SpriteFrames_x40gg")
+animation = &"Walk"
+autoplay = "Idle"

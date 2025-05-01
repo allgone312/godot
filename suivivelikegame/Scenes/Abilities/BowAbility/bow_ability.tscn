@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://cc83ub0jyxgdq"]
+
+[ext_resource type="Script" uid="uid://bsf0ebluysidy" path="res://Scripts/Abilities/Bow/BowAbility.cs" id="1_6wso0"]
+[ext_resource type="Texture2D" uid="uid://cp7scflxgnsns" path="res://Assets/Abilities/Icons/0648.png" id="1_hr7tg"]
+[ext_resource type="PackedScene" uid="uid://c706ajbwwr75c" path="res://Scenes/Component/hit_box_component.tscn" id="2_rlgn4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g8iqn"]
+size = Vector2(17, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6wso0"]
+size = Vector2(17, 8)
+
+[node name="BowAbility" type="Node2D"]
+script = ExtResource("1_6wso0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 0.785398
+texture = ExtResource("1_hr7tg")
+offset = Vector2(5, -5)
+
+[node name="HitBoxComponent" parent="." instance=ExtResource("2_rlgn4")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxComponent"]
+position = Vector2(8.5, 0)
+shape = SubResource("RectangleShape2D_g8iqn")
+
+[node name="CheckCollideArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CheckCollideArea"]
+position = Vector2(8.5, 0)
+shape = SubResource("RectangleShape2D_6wso0")

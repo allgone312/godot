@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://bchm137dqyt1v"]
+
+[ext_resource type="PackedScene" uid="uid://78rtndli5jbw" path="res://Scenes/Abilities/BowAbility/bow_abiliby_controller.tscn" id="1_inyb8"]
+[ext_resource type="Texture2D" uid="uid://d3vtdx7p187rm" path="res://Assets/Abilities/bg_icons/0520.png" id="2_qonc8"]
+[ext_resource type="Script" uid="uid://dmwwgqro2fqld" path="res://Scripts/Abilities/Upgrades/Ability_Itself.cs" id="3_8ipb6"]
+
+[resource]
+script = ExtResource("3_8ipb6")
+abilityController_scene = ExtResource("1_inyb8")
+id = "bow"
+weight = 10
+parent_ability_id = ""
+max_count = 1
+name = "反曲弓"
+icon = ExtResource("2_qonc8")
+description = "每隔一定时间向敌人射击。"

@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://u6u0osghnbws"]
+
+[ext_resource type="Script" uid="uid://d1bl1lodv23c" path="res://Scripts/GameObjects/Objects/ExperienceVial.cs" id="1_ror32"]
+[ext_resource type="Texture2D" uid="uid://bpj1py43gnpq8" path="res://Assets/GameObjects/Icons/0502.png" id="2_ror32"]
+[ext_resource type="PackedScene" uid="uid://ccjtu7lnxvf2t" path="res://Scenes/Component/Random_audio_component.tscn" id="3_0unuy"]
+[ext_resource type="AudioStream" uid="uid://cbidjf3u78fbq" path="res://Assets/Audio/pickupVial.wav" id="4_0flw4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ror32"]
+radius = 11.0454
+
+[node name="Experience_Vial" type="Node2D" node_paths=PackedStringArray("randomAudioComponent")]
+script = ExtResource("1_ror32")
+randomAudioComponent = NodePath("RandomAudioComponent")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ror32")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_ror32")
+
+[node name="RandomAudioComponent" parent="." instance=ExtResource("3_0unuy")]
+stream = ExtResource("4_0flw4")
+audioStreams = Array[AudioStream]([ExtResource("4_0flw4")])
+max_pitch = 2.0
+min_pitch = 1.5

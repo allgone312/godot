@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b65gwqmuch75b"]
+
+[ext_resource type="AudioStream" uid="uid://xvlqg22fnq4w" path="res://Assets/Audio/713123__seth_makes_sounds__hard-game-music-115bpm.wav" id="1_deymv"]
+[ext_resource type="Script" uid="uid://d2ud5fjy38g53" path="res://Scripts/AutoLoad/MusicPlayer.cs" id="2_deymv"]
+
+[node name="MusicPlayer" type="AudioStreamPlayer"]
+process_mode = 3
+stream = ExtResource("1_deymv")
+volume_db = -10.0
+autoplay = true
+bus = &"Music"
+script = ExtResource("2_deymv")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 15.0
+one_shot = true

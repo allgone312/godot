@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgs75cuh45nmp"]
+
+[ext_resource type="Script" uid="uid://nw778vlcpxjb" path="res://Scripts/UI/FloatingDamage.cs" id="1_eb5i6"]
+[ext_resource type="FontFile" uid="uid://ckqiedpjley3l" path="res://Assets/Font/VonwaonBitmap-12px.ttf" id="2_dahvu"]
+
+[node name="FloatingDamage" type="Node2D"]
+script = ExtResource("1_eb5i6")
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(100, 30)
+offset_left = -51.0
+offset_top = -15.0
+offset_right = 49.0
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(1, 0.831373, 0, 1)
+theme_override_colors/font_outline_color = Color(0.247059, 0.14902, 0.192157, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_dahvu")
+theme_override_font_sizes/font_size = 12
+text = "999"
+horizontal_alignment = 1
+vertical_alignment = 1

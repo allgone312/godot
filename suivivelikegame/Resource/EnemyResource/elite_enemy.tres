@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://bp700nhhjlq1m"]
+
+[ext_resource type="PackedScene" uid="uid://b5mgbsvfsat1k" path="res://Scenes/GameObjects/Enemies/elite_enemy.tscn" id="1_n1674"]
+[ext_resource type="Script" uid="uid://bxo44dp80yrj2" path="res://Scripts/GameObjects/Enemies/EnemyProperty.cs" id="2_ws1is"]
+
+[resource]
+script = ExtResource("2_ws1is")
+enemyPackedScene = ExtResource("1_n1674")
+enemyName = "elite_enemy"
+enemyType = "elite"
+weight = 20
+difficultyToSpawn = 10

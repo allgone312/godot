@@ -1,0 +1,106 @@
+[gd_scene load_steps=8 format=3 uid="uid://c6xxud52k4ibg"]
+
+[ext_resource type="Shader" uid="uid://bnrtnnvrb58uk" path="res://Resource/Shaders/ScreenTransition.gdshader" id="1_7mbjp"]
+[ext_resource type="Script" uid="uid://3fl8o6yg0in4" path="res://Scripts/AutoLoad/ScreenTransition.cs" id="1_dr6qw"]
+[ext_resource type="Texture2D" uid="uid://dm33y2ryaeuyw" path="res://Assets/ui/screen_transition.png" id="2_dr6qw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hqe87"]
+shader = ExtResource("1_7mbjp")
+shader_parameter/transition_color = Color(0.211765, 0.211765, 0.211765, 1)
+shader_parameter/transition_texture = ExtResource("2_dr6qw")
+shader_parameter/persent = 0.0
+
+[sub_resource type="Animation" id="Animation_7btrh"]
+resource_name = "trans"
+length = 0.4
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/persent")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"Emit_HalfScreenTransition"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.01),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_wwct4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/persent")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8w8c6"]
+_data = {
+&"RESET": SubResource("Animation_wwct4"),
+&"trans": SubResource("Animation_7btrh")
+}
+
+[node name="ScreenTransition" type="CanvasLayer"]
+process_mode = 3
+layer = 10
+script = ExtResource("1_dr6qw")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_hqe87")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_8w8c6")
+}

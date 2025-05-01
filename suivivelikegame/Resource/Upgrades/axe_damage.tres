@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://7xrbt31avxha"]
+
+[ext_resource type="Texture2D" uid="uid://rvj0vnu4vkdu" path="res://Assets/Abilities/bg_icons/0399.png" id="2_mex32"]
+[ext_resource type="Script" uid="uid://bgxatxcwyq6kj" path="res://Scripts/Abilities/Upgrades/Ability_Upgrades.cs" id="2_tn5tb"]
+
+[resource]
+script = ExtResource("2_tn5tb")
+id = "axe_damage"
+weight = 10
+parent_ability_id = "axe"
+max_count = 0
+name = "攻击力"
+icon = ExtResource("2_mex32")
+description = "旋风斧攻击力提高10%"
